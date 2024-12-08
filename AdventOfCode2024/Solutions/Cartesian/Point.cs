@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace AdventOfCode2024.Solutions.Cartesian;
 
 public class Point
@@ -57,4 +59,26 @@ public class Point
     public override string ToString() => $"Point({X}, {Y})";
 
     public static int ManhattanDistance(Point a, Point b) => Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y);
+
+    public static Point SimplifyVector(Point vector)
+    {
+        var x = vector.X;
+        var y = vector.Y;
+        
+        if (vector.X == 0 || vector.Y == 0) return vector;
+        if (vector.X % vector.Y == 0) return new Point(vector.X / vector.Y, 1);
+        if (vector.Y % vector.X == 0) return new Point(1, vector.Y / vector.X);
+            
+        var limit = Math.Min(Math.Abs(x), Math.Abs(y)) / 2;
+        for (int p = 2; p <= limit; ++p)
+        {
+            while (x % p == 0 && y % p == 0)
+            {
+                x /= p;
+                y /= p;
+            }
+        }
+
+        return new Point(x, y);
+    }
 }

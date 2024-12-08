@@ -1,9 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a7249502_002Dd47a_002D420d_002Dae08_002D2ed27e1b94b4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Day01Tests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Or&gt;
-    &lt;ProjectFile&gt;EB0A505F-49D7-4876-BDEE-481CE7C50911/d:Solutions/f:Day01Tests.cs&lt;/ProjectFile&gt;
-    &lt;ProjectFile&gt;EB0A505F-49D7-4876-BDEE-481CE7C50911/d:Solutions/f:Day02Tests.cs&lt;/ProjectFile&gt;
-    &lt;ProjectFile&gt;EB0A505F-49D7-4876-BDEE-481CE7C50911/d:Solutions/f:Day03Tests.cs&lt;/ProjectFile&gt;
-    &lt;ProjectFile&gt;EB0A505F-49D7-4876-BDEE-481CE7C50911/d:Solutions/f:Day04Tests.cs&lt;/ProjectFile&gt;
-  &lt;/Or&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

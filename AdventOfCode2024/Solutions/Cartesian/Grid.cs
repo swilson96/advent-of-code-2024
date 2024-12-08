@@ -25,16 +25,17 @@ public class Grid<T> : IGrid<T>
 
         Bounds = new Point(_grid[0].Length, _grid.Length);
     }
+    
+    public static Grid<char> DefaultCharGrid(string input) => new (input, c => c);
 
     public T GetValue(int x, int y)
     {
         return _grid[y][x];
     }
+
+    public bool InBounds(Point p) => p.X >= 0 && p.X < Bounds.X && p.Y >= 0 && p.Y < Bounds.Y;
     
-    public bool InBoundsAndMatches(Point p, T valueToMatch)
-    {
-        return p.X >= 0 && p.X < Bounds.X && p.Y >= 0 && p.Y < Bounds.Y && GetValue(p.X, p.Y).Equals(valueToMatch);
-    }
+    public bool InBoundsAndMatches(Point p, T valueToMatch) => InBounds(p) && GetValue(p.X, p.Y).Equals(valueToMatch);
 
     public IEnumerator<Tuple<Point, T>> GetEnumerator()
     {
