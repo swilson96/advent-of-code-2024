@@ -7,7 +7,27 @@ public class Point
     public int X { get; }
     public int Y { get; }
 
+    /// <summary>
+    /// The four neighbours in each Direction
+    /// </summary>
     public IEnumerable<Point> Neighbours => Enum.GetValues<Direction>().Select(d => this.Add(d, 1));
+    
+    /// <summary>
+    /// The eight cells that completely surround this one. Neighbours combined with "diagonal neighbours".
+    /// </summary>
+    public IEnumerable<Point> Surrounds {
+        get
+        {
+            foreach (var n in Neighbours)
+            {
+                yield return n;
+            }
+            yield return new Point(X + 1, Y + 1);
+            yield return new Point(X + 1, Y - 1);
+            yield return new Point(X - 1, Y + 1);
+            yield return new Point(X - 1, Y - 1);
+        }
+    }
 
     public Point(int x, int y)
     {
