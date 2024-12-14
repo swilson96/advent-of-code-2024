@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using AdventOfCode2024.Solutions.Cartesian;
 
 namespace AdventOfCode2024.Solutions;
