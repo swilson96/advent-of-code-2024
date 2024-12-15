@@ -46,9 +46,11 @@ public class Point
         _ => throw new ArgumentOutOfRangeException($"Direction {direction} unexpected")
     };
 
-    public Point Add(Point other) => new(X + other.X, Y + other.Y);
+    public Point Add(Point other) => Add(other, 1);
 
-    public Point Subtract(Point other) => new(X - other.X, Y - other.Y);
+    public Point Subtract(Point other) => Add(other, -1);
+
+    public Point Add(Point other, int times) => new(X + other.X * times, Y + other.Y * times);
 
     public override bool Equals(object? obj) => Equals(obj as Point);
 

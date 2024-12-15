@@ -4,7 +4,7 @@ namespace AdventOfCode2024.Solutions;
 
 public class Template : IAdventSolution
 {
-    private readonly Regex _inputRegex = new (@"Sensor at x=([\d-]+), y=([\d-]+): closest beacon is at x=([\d-]+), y=([\d-]+)");
+    private static readonly Regex InputRegex = new (@"Sensor at x=([\d-]+), y=([\d-]+): closest beacon is at x=([\d-]+), y=([\d-]+)");
     
     public object PartOne(string input)
     {
