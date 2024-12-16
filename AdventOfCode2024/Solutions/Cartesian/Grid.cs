@@ -28,10 +28,9 @@ public class Grid<T> : IGrid<T>
     
     public static Grid<char> DefaultCharGrid(string input) => new (input, c => c);
 
-    public T GetValue(int x, int y)
-    {
-        return _grid[y][x];
-    }
+    public T GetValue(int x, int y) => _grid[y][x];
+
+    public T GetValue(Point p) => GetValue(p.X, p.Y);
 
     public bool InBounds(Point p) => p.X >= 0 && p.X < Bounds.X && p.Y >= 0 && p.Y < Bounds.Y;
     
