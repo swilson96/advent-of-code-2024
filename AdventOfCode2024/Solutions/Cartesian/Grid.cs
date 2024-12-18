@@ -31,6 +31,10 @@ public class Grid<T> : IGrid<T>
     public T GetValue(int x, int y) => _grid[y][x];
 
     public T GetValue(Point p) => GetValue(p.X, p.Y);
+    
+    public void SetValue(int x, int y, T value) => _grid[y][x] = value;
+
+    public void SetValue(Point p, T value) => SetValue(p.X, p.Y, value);
 
     public bool InBounds(Point p) => p.X >= 0 && p.X < Bounds.X && p.Y >= 0 && p.Y < Bounds.Y;
     

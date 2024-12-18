@@ -28,6 +28,6 @@ public class Day06Tests
     {
         var result = new Day06().PartTwo(ExampleInput);
         
-        Assert.Equal(0, result);
+        Assert.Equal(6, result);
     }
 }
