@@ -55,10 +55,18 @@ public class Day16Tests
     }
 
     [Fact]
-    public void PartTwoExample()
+    public void PartTwoExampleOne()
     {
         var result = new Day16().PartTwo(ExampleInputOne);
         
-        Assert.Equal(0, result);
+        Assert.Equal(45, result);
+    }
+    
+    [Fact]
+    public void PartTwoExampleTwo()
+    {
+        var result = new Day16().PartTwo(ExampleInputTwo);
+        
+        Assert.Equal(64, result);
     }
 }
