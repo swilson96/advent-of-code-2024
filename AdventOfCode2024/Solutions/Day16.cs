@@ -8,11 +8,9 @@ public class Day16 : IAdventSolution
     {
         var grid = Grid<char>.DefaultCharGrid(input);
 
-        // var (distance, _, end) = PopulateDistancesToEnd(grid);
+        var (distance, _, end) = PopulateDistancesToEnd(grid);
 
-        // return distance[end];
-
-        return 0;
+        return distance[end];
     }
 
     private Tuple<Dictionary<Loc, int>, Loc, Loc> PopulateDistancesToEnd(Grid<char> grid)
